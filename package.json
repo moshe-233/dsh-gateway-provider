@@ -54,7 +54,8 @@
         "@deepseek-ai/dsh-client-runtime",
         "@deepseek-ai/dsh-client-web-react"
       ],
-      "platform": "web"
+      "platform": "web",
+      "immediately": true
     },
     "bundle": {
       "patch": "./cordis.patch.yml"
