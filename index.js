@@ -94,6 +94,13 @@ const ModelOverrideSchema = z.object({
   maxTokens: z.number().step(1).min(1),
   /** Reasoning level set (e.g. ["off","low","medium","high"]). */
   reasoningLevels: z.array(coercedString()),
+  /** Internal markers written by the client UI */
+  _custom: z.boolean(),
+  _discoveredName: coercedString(),
+  _protocol: coercedString(),
+  _discoveredContext: z.number(),
+  _discoveredMax: z.number(),
+  _reasoning: z.boolean(),
 });
 
 /** Gateway-type templates the settings UI offers (informational labels). */
